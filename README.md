@@ -2,7 +2,7 @@
 
 A Telegram bot which shares a random page from The Rust Programming Language Book (The Book) when prompted. 
 
-Built using teloxide.
+Built using [teloxide](https://github.com/teloxide/teloxide).
 
 ## Disclaimer 
 
