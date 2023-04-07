@@ -10,13 +10,13 @@ mod verse;
 #[derive(BotCommands, Clone)]
 #[command(rename_rule = "lowercase", description = "These commands are supported:")]
 enum Command {
-    #[command(description = "display this text.")]
+    #[command(description = "display this text")]
     Help,
-    #[command(description = "source code.")]
+    #[command(description = "source code")]
     Source,
     #[command(description = "what is my purpose?")]
     Purpose,
-    #[command(description = "picks a verse.")]
+    #[command(description = "picks a verse")]
     Verse,
 }
 
