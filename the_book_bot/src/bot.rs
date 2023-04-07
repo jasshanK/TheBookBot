@@ -12,6 +12,8 @@ mod verse;
 enum Command {
     #[command(description = "display this text.")]
     Help,
+    #[command(description = "source code.")]
+    Source,
     #[command(description = "what is my purpose?")]
     Purpose,
     #[command(description = "picks a verse.")]
@@ -32,6 +34,9 @@ pub async fn run() {
 async fn answer(bot: Bot, msg: Message, cmd: Command) -> ResponseResult<()> {
     match cmd {
         Command::Help => bot.send_message(msg.chat.id, Command::descriptions().to_string()).await?,
+        Command::Source => {
+            bot.send_message(msg.chat.id, format!("https://github.com/jasshanK/TheBookBot")).await?
+        }
         Command::Purpose => {
             bot.send_message(msg.chat.id, format!("My purpose is to preach the verses of The Book to Oxidise the world.")).await?
         }
